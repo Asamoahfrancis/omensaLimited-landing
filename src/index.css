@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  --border: #e5e7eb;
+  --input: #d1d5db;
+  --ring: #93c5fd;
+
+  --chart-1: #6366f1;
+  --chart-2: #f59e0b;
+  --chart-3: #10b981;
+  --chart-4: #ec4899;
+  --chart-5: #3b82f6;
+
+  --sidebar-background: #1f2937;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f59e0b;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #374151;
+  --sidebar-ring: #60a5fa;
+  /* Omensa Limited color palette */
+  --omensa-red: hsl(0, 85%, 45%);
+  --deep-red: hsl(0, 85%, 25%);
+  --light-red: hsl(0, 85%, 65%);
+  --pure-white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 98%);
+  --dark-gray: hsl(0, 0%, 15%);
+  --success-green: hsl(158, 77%, 39%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+:root {
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  /* * {
+    @apply border-border;
+  } */
+
+  /* body {
+    @apply font-sans antialiased bg-background text-foreground;
+  } */
+}
+
+@layer utilities {
+  .omensa-red {
+    background-color: var(--omensa-red);
+  }
+
+  .text-omensa-red {
+    color: var(--omensa-red);
+  }
+
+  .deep-red {
+    background-color: var(--deep-red);
+  }
+
+  .text-deep-red {
+    color: var(--deep-red);
+  }
+
+  .light-red {
+    background-color: var(--light-red);
+  }
+
+  .text-light-red {
+    color: var(--light-red);
+  }
+
+  .pure-white {
+    background-color: var(--pure-white);
+  }
+
+  .text-pure-white {
+    color: var(--pure-white);
+  }
+
+  .dark-gray {
+    background-color: var(--dark-gray);
+  }
+
+  .text-dark-gray {
+    color: var(--dark-gray);
+  }
+
+  .success-green {
+    background-color: var(--success-green);
+  }
+
+  .text-success-green {
+    color: var(--success-green);
+  }
+}
+/* Accordion Animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
