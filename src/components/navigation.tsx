@@ -96,7 +96,7 @@ export default function Navigation() {
                     Omensa Limited
                   </SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col space-y-4 mt-8">
+                <div className="flex flex-col   space-y-4 mt-8">
                   {navItems.map((item) => (
                     <Link
                       key={item.path}
