@@ -188,23 +188,26 @@ export default function Products() {
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="dark-gray text-white py-20">
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+
+      <section className="dark-gray  py-20 relative">
+
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('/banner for the main products.png')`,
-          }}
+            className="absolute inset-0 bg-cover bg-center blur-lg"
+            style={{
+              backgroundImage: `url('/banner for the main products.png')`,
+            }}
         ></div>
-        <div className="relative max-w-7xl mx-auto px-4  text-yellow-100 sm:px-6 lg:px-8">
-          <div className="text-center ">
+        <div className="absolute inset-0 bg-black/20  opacity-40"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-yellow-100">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Industrial Products Catalog
+              Professional Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-              Comprehensive range of high-quality industrial plumbing components
-              and equipment
+            <p className="text-xl md:text-2xl  mb-8 max-w-3xl mx-auto font-semibold">
+              Expert consultation and support services to optimize your
+              industrial plumbing systems
             </p>
           </div>
         </div>

@@ -218,15 +218,17 @@ export default function Services() {
 
       {/* Hero Section */}
       <section className="dark-gray  py-20 relative">
-        <div className="absolute inset-0  bg-opacity-50"></div>
+
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center blur-sm"
           style={{
             backgroundImage: `url('Pipeline-and-refinery-construction.jpg')`,
           }}
         ></div>
+        <div className="absolute inset-0 bg-black  opacity-20"></div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-red-500">
+          <div className="text-center text-yellow-100">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Professional Services
             </h1>

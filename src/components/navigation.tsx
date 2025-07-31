@@ -41,7 +41,7 @@ export default function Navigation() {
                   <img
                     src="/Artboard 3.png"
                     alt="Omensa Limited Logo"
-                    className="h-30 w-auto"
+                    className="h-28 w-auto"
                   />
                   {/* Company Name */}
                   {/* <h1 className="text-xl font-bold text-omensa-red hover:text-red-700 transition-colors">
