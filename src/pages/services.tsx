@@ -19,14 +19,15 @@ import {
   Users,
   Award,
 } from "lucide-react";
+import {Link} from "wouter";
 
 export default function Services() {
-  const scrollToContact = () => {
-    const element = document.getElementById("footer");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToContact = () => {
+  //   const element = document.getElementById("footer");
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   const services = [
     // {
@@ -212,6 +213,16 @@ export default function Services() {
     },
   ];
 
+
+  const handleContactClick = (e: any) => {
+    e.preventDefault();
+    // Update URL hash
+
+    window.history.pushState(null, '', '/#contact');
+    // Scroll to section
+    // scrollToSection('contact');
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -329,9 +340,11 @@ export default function Services() {
                     <div className="flex gap-4 pt-4">
                       <Button
                         className="omensa-red text-white hover:bg-red-700 flex-1"
-                        onClick={scrollToContact}
+                        // onClick={scrollToContact}
                       >
+                        <Link href="/#contact" onClick={handleContactClick} >
                         Request Service
+                        </Link>
                       </Button>
                       {/* <Button
                         variant="outline"

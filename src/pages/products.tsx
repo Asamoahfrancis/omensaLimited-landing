@@ -9,6 +9,8 @@ import {
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import {Link} from "wouter";
+
 
 export default function Products() {
   const scrollToContact = () => {
@@ -184,6 +186,16 @@ export default function Products() {
     "Equipment",
   ];
 
+  const handleContactClick = (e: any) => {
+    e.preventDefault();
+    // Update URL hash
+
+    window.history.pushState(null, '', '/#contact');
+    // Scroll to section
+    // scrollToSection('contact');
+  };
+
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -302,13 +314,19 @@ export default function Products() {
                   </div>
 
                   <div className="flex gap-4 pt-4">
+
                     <Button
                       className="omensa-red text-white hover:bg-red-700 flex-1"
                       onClick={scrollToContact}
                     >
-                      Request Quote
-                      <ArrowRight className="ml-2" size={16} />
+                      <Link href="/#contact" onClick={handleContactClick} >
+                        <div className={'flex items-center justify-center '}>
+                          Request Quote
+                          <ArrowRight className="ml-2" size={16} />
+                        </div>
+                      </Link>
                     </Button>
+
                     {/* <Button
                       variant="outline"
                       className="border-omensa-red text-omensa-red hover:bg-omensa-red hover:text-white"
