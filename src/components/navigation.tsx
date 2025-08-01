@@ -29,6 +29,27 @@ export default function Navigation() {
   //   }
   // };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
+  const handleContactClick = (e: any) => {
+    e.preventDefault();
+    // Update URL hash
+
+    window.history.pushState(null, '', '/#contact');
+    // Scroll to section
+    scrollToSection('contact');
+  };
+
+
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +89,7 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/#contact">
+              <Link href="/#contact" onClick={handleContactClick}>
                 <Button className="omensa-red text-white hover:bg-red-700">
                   Contact Us
                 </Button>
