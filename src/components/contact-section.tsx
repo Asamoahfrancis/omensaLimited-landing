@@ -95,7 +95,7 @@ export default function ContactSection() {
         {
             icon: Phone,
             label: "Phone",
-            value: "+2338800888",
+            value: "+233 (24) 8800888",
         },
         {
             icon: Mail,
